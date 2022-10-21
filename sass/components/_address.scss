@@ -1,0 +1,33 @@
+.address {
+  font-style: normal;
+
+  &__item {
+    margin-bottom: 5px;
+  
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  
+  &__link {
+    font-weight: 400;
+    color: $white-text-color;
+  
+    &[href^="mailto"],
+    &[href^="tel"] {
+      color: $white-opacity-text-color;
+    }
+    
+    &,
+    &[href^="mailto"],
+    &[href^="tel"] {
+      transition: color $duration-time-function;
+    }
+  
+    &:hover,
+    &:focus {
+      color: $accent-text-color;
+    }
+  }
+}

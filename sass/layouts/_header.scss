@@ -1,0 +1,85 @@
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  min-height: 80px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.nav__logo {
+  margin-right: 93px;
+
+  color: $logo-color;
+}
+
+.nav__list,
+.contact__list {
+  display: flex;
+
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.nav__item,
+.contact__item {
+  margin-right: 50px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.contact__item {
+  display: flex;
+  align-items: center;
+
+  .contact__icon {
+    margin-right: 10px;
+
+    fill: #757575;
+    transition: fill $duration-time-function;
+  }
+
+  &:hover .contact__icon,
+  &:focus .contact__icon {
+    fill: $accent-text-color;
+  }
+}
+
+.nav__link {
+  position: relative;
+
+  display: block;
+  padding: 32px 0;
+
+  color: $secondary-text-color;
+  font-weight: 500;
+}
+
+.contact__link[href^="mailto"],
+.contact__link[href^="tel"] {
+  display: flex;
+  align-items: center;
+  padding: 32px 0;
+
+  color: $primary-text-color;
+  font-weight: 500;
+}
+
+.nav__link,
+.contact__link {
+  transition: color $duration-time-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-text-color;
+  }
+}

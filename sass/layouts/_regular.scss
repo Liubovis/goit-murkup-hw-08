@@ -1,0 +1,47 @@
+.regular {
+  padding: 94px 0;
+}
+
+.regular__list {
+  display: flex;
+}
+
+.regular__item {
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.regular__link {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+
+  @include boxSize(170px, 92px);
+
+  border: 1px solid $icon-color;
+  border-radius: 4px;
+  fill: $icon-color;
+
+  transition: border-color $duration-time-function;
+
+  &:hover,
+  &:focus {
+    border-color: $accent-background-color;
+  }
+  
+  & .regular__icon {
+    @include boxSize(106px, 60px);
+    text-align: center;
+
+    transition: fill $duration-time-function;
+  }
+
+  &:hover .regular__icon,
+  &:focus .regular__icon {
+    fill: $accent-background-color;
+  }
+}

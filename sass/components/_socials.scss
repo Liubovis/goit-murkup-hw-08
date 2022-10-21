@@ -1,0 +1,45 @@
+.socials {
+  display: flex;
+  align-items: center;
+}
+
+.socials__item {
+  margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+
+.socials__icon {
+  @include boxSize(20px, 20px);
+
+  fill: $icon-color;
+}
+
+.socials__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include boxSize(44px, 44px);
+
+  border-radius: 50%;
+  background-color: rgb(255 255 255 / 10%);
+  
+  &,
+  & .socials__icon {
+    transition: background-color $duration-time-function,
+      fill $duration-time-function;
+  }
+  
+  &:hover,
+  &:focus {
+    background-color: $accent-background-color;
+  }
+  
+  &:hover .socials__icon,
+  &:focus .socials__icon {
+    fill: $white-text-color;
+  }
+}

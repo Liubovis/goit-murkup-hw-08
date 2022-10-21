@@ -1,0 +1,63 @@
+.modal {
+  position: fixed;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include boxSize(100vw ,100vh);
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  &__form {
+    position: absolute;
+  
+    width: 528px;
+    padding: 40px 40px;
+  
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: $primary-background-color;
+  
+    @include keyframes(fadeInDown) {
+      from {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+      }
+  
+      to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+  
+    @include animation(fadeInDown, 3s);
+  }
+}
+
+.btn-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  display: flex;
+  align-items: center;
+  @include boxSize(30px, 30px);
+
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: $primary-background-color;
+
+  cursor: pointer;
+
+  &__icon--close {
+    @include boxSize(18px, 18px);
+  
+    fill: $logo-color;
+    transition: fill $duration-time-function;
+  }
+  
+  &:hover &__icon--close,
+  &:focus &__icon--close {
+    fill: $accent-text-color;
+  }
+}

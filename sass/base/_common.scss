@@ -1,0 +1,102 @@
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: $main-font;
+  color: $secondary-text-color;
+  @include font(14px, 400, 1.7, 0.03em);
+
+  background-color: $primary-background-color;
+}
+
+/* Reusable classes */
+.root {
+  position: relative;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.overlay {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  @include boxSize(100%, 100%);
+
+  overflow: hidden;
+}
+
+.title {
+  margin-bottom: 50px;
+  
+  @include font(36px, 700, 1.2, 0.03em);
+  text-align: center;
+}
+
+.active {
+  color: $accent-text-color;
+
+  &::after {
+    content: '';
+  
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+  
+    display: block;
+    @include boxSize(100%, 4px);
+  
+    background-color: $accent-background-color;
+     border-radius: 2px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+
+  @include boxSize(1px, 1px);
+  border: 0;
+  margin: -1px;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.js-hidden {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
