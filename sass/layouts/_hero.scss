@@ -1,22 +1,65 @@
 .hero {
   padding: 200px 0;
 
-  height: 600px;
-  max-width: 1600px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
 
   background-color: $dark-background-color;
-  /* background-color: #C4C4C4; */
-  background-image: linear-gradient(to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)),
-    url(../images/studio/hero-Img.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
+  @include mq(mobile-only) {
+    max-width: 480px;
+    height: 400px;
+
+    background-image: linear-gradient(to right,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)),
+    url(../images/studio/hero-sm.jpg);
+
+    @include mq(retina) {
+      background-image: linear-gradient(to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+        url(../images/studio/hero-sm@2x.jpg);
+    }
+  }
+  
+  @include mq(tablet-only) {
+    max-width: 768px;
+    height: 400px;
+
+    background-image: linear-gradient(to right,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)),
+    url(../images/studio/hero-md.jpg);
+
+    @include mq(retina) {
+      background-image: linear-gradient(to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+        url(../images/studio/hero-md@2x.jpg);
+    }
+  }
+  
+  @include mq(desktop) {
+    max-width: 1600px;
+    height: 600px;
+
+    background-image: linear-gradient(to right,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)),
+    url(../images/studio/hero-lg.jpg);
+
+    @include mq(retina) {
+      background-image: linear-gradient(to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+        url(../images/studio/hero-lg@2x.jpg);
+    }
+  }
 }
 
 .hero__title {

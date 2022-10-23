@@ -41,8 +41,13 @@ body {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  
+  @include mq(desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .overlay {
@@ -56,10 +61,15 @@ body {
 }
 
 .title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   
-  @include font(36px, 700, 1.2, 0.03em);
+  @include font(28px, 700, 1.2, 0.03em);
   text-align: center;
+
+  @include mq(desktop) {
+    margin-bottom: 50px;
+    @include font(36px, 700, 1.2, 0.03em);
+  }
 }
 
 .active {

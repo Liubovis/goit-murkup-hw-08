@@ -1,6 +1,13 @@
 .services {
-  padding: 47px 0 94px;
   background-color: $primary-background-color;
+  
+  @include mq(befor-desktop) {
+    display: none;;
+  }
+
+  @include mq(desktop) {
+    padding-top: 47px;
+  }
 }
 
 .services__list {
