@@ -28,6 +28,10 @@
     width: calc((100% - 4 * 15px) / 2);
     margin: 15px;
   }
+
+  @include mq(desktop) {
+    width: calc((100% - 8 * 15px) / 4);
+  }
 }
 
 .benefits__icon-wrapper {

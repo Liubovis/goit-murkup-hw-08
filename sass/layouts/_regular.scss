@@ -1,12 +1,23 @@
 .regular__list {
-  display: flex;
-}
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+
 
 .regular__item {
-  margin-right: 30px;
+  margin: 15px;
 
-  &:last-child {
-    margin-right: 0;
+  @include mq(mobile-only) {
+    width: calc((100% - 4 * 15px) / 2);
+  }
+
+  @include mq(tablet-only) {
+    width: calc((100% - 6 * 15px) / 3);
+  }
+
+  @include mq(desktop) {
+    width: calc((100% - 12 * 15px) / 6);
   }
 }
 
@@ -15,8 +26,7 @@
   align-content: center;
   align-items: center;
   justify-content: center;
-
-  @include boxSize(170px, 92px);
+  height: 92px;
 
   border: 1px solid $icon-color;
   border-radius: 4px;
