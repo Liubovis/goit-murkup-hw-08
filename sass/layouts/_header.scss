@@ -3,15 +3,8 @@
 }
 
 .header__wrapper {
-
   @include mq(mobile-only) {
     height: 60px;
-  }
-  
-  @include mq(mobile) {
-  }
-  
-  @include mq(tablet-only) {
   }
   
   @include mq(tablet) {
@@ -19,21 +12,9 @@
     align-items: center;
     min-height: 80px;
   }
-  
-  @include mq(desktop) {
-  }
 }
 
 .nav {
-
-
-  @include mq(mobile-only) {
-  }
-  
-  @include mq(mobile) {
-
-  }
-  
   @include mq(tablet-only) {
     margin-right: 90px;
   }
@@ -79,19 +60,8 @@
 }
 
 .contact__list {
-  
-  
-  @include mq(mobile) {
-  }
-  
-  @include mq(tablet-only) {
-  }
-  
   @include mq(tablet) {
     flex-wrap: wrap;
-  }
-  
-  @include mq(desktop) {
   }
 }
 
