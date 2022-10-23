@@ -8,7 +8,6 @@
 .form__element {
   display: flex;
   flex-direction: column;
-  width: 448px;
   margin-bottom: 10px;
 
   
@@ -76,22 +75,16 @@
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
-
-  &-label,
-  &-link {
-    @include font(14px, 400, 1.7, 0.03em);
-  }
   
   &-label {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
   
     color: $primary-text-color;
   }
   
   &-link {
-    margin-left: 7px;
-  
     color: $accent-text-color;
   
     &::after {
@@ -103,6 +96,24 @@
       background-color: $accent-background-color;
     
       translate: 0 -6px;
+    }
+
+    @include mq(mobile) {
+      margin-left: 7px;
+    }
+  }
+
+  @include mq(befor-desktop) {
+    &-label,
+    &-link {
+      @include font(12px, 400, 1.7, 0.03em);
+    }
+  }
+
+  @include mq(desktop) {
+    &-label,
+    &-link {
+      @include font(14px, 400, 1.7, 0.03em);
     }
   }
 }

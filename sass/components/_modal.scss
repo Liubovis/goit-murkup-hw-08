@@ -11,7 +11,7 @@
   &__form {
     position: absolute;
   
-    width: 528px;
+    // width: 528px;
     padding: 40px 40px;
   
     border-radius: 4px;
@@ -31,6 +31,14 @@
     }
   
     @include animation(fadeInDown, 3s);
+
+    @include mq(mobile) {
+      width: 450px;
+    }
+  
+    @include mq(desktop) {
+      width: 528px;
+    }
   }
 }
 
