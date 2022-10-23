@@ -72,7 +72,7 @@ body {
   }
 }
 
-.active {
+.nav__link.active {
   color: $accent-text-color;
 
   &::after {
@@ -86,7 +86,7 @@ body {
     @include boxSize(100%, 4px);
   
     background-color: $accent-background-color;
-     border-radius: 2px;
+    border-radius: 2px;
   }
 }
 
