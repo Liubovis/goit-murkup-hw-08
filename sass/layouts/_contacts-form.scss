@@ -73,7 +73,6 @@
 
 .form__checkbox {
   display: flex;
-  justify-content: center;
   margin-bottom: 30px;
   
   &-label {
@@ -106,11 +105,14 @@
   @include mq(befor-desktop) {
     &-label,
     &-link {
+      display: inline-block;
       @include font(12px, 400, 1.7, 0.03em);
     }
   }
 
   @include mq(desktop) {
+    justify-content: center;
+    
     &-label,
     &-link {
       @include font(14px, 400, 1.7, 0.03em);
