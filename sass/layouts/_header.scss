@@ -1,156 +1,158 @@
 .header {
   border-bottom: 1px solid #ececec;
-}
 
-.header__wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 
-  @include mq(mobile-only) {
-    height: 60px;
-  }
-  
-  @include mq(tablet) {
-    min-height: 80px;
-  }
-}
-
-.nav {
-  @include mq(tablet-only) {
-    margin-right: 90px;
-  }
-  
-  @include mq(tablet) {
+  &__wrapper {
     display: flex;
     align-items: center;
-  }
-  
-  @include mq(desktop) {
-    margin-right: auto;
-  }
-}
+    justify-content: space-between;
 
-.nav__logo {
-  color: $logo-color;
-
-  @include mq(mobile-only) {
-    line-height: 60px;
-  }
-
-  @include mq(tablet) {
-    margin-right: 87px;
-  }
-
-  @include mq(desktop) {
-    margin-right: 93px;
-  }
-}
-
-.nav__list,
-.contact__list {
-  @include mq(mobile-only) {
-    display: none;
-  }
-  
-  @include mq(tablet) {
-    display: flex;
-
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-  }
-}
-
-.contact__list {
-  @include mq(tablet) {
-    flex-wrap: wrap;
-  }
-}
-
-.nav__item {
-  @include mq(tablet) {
-    margin-right: 50px;
-  
-    &:last-child {
-      margin-right: 0;
+    @include mq(mobile-only) {
+      height: 60px;
     }
-  }
-}
-
-.contact__item {
-  @include mq(tablet-only) {
-    margin-bottom: 10px;
-  
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  @include mq(tablet) {
-    display: flex;
-    align-items: center;
-  
-    .contact__icon {
-      margin-right: 10px;
-  
-      fill: #757575;
-      transition: fill $duration-time-function;
-    }
-  
-    &:hover .contact__icon,
-    &:focus .contact__icon {
-      fill: $accent-text-color;
-    }
-  }
-
-  @include mq(desktop) {
-    margin-right: 50px;
-  
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-}
-
-.nav__link {
-  @include mq(tablet) {
-    position: relative;
-
-    display: block;
-    padding: 32px 0;
-
-    color: $secondary-text-color;
-    @include font(14px, 500, 1.2, 0.02em);
-  }
-}
-
-.contact__link[href^="mailto"],
-.contact__link[href^="tel"] {
-  @include mq(tablet-only) {
-    @include font(12px, 500, 1.2, 0.02em);
-  }
-
-  @include mq(tablet) {
-    display: flex;
-    align-items: center;
     
-    color: $primary-text-color;
-  }
-  
-  @include mq(desktop) {
-    padding: 32px 0;
-    @include font(14px, 500, 1.2, 0.02em);
-  }
-}
-
-.nav__link,
-.contact__link {
-  @include mq(tablet) {
-    transition: color $duration-time-function;
-  
-    &:hover,
-    &:focus {
-      color: $accent-text-color;
+    @include mq(tablet) {
+      min-height: 80px;
     }
   }
+
+  .nav {
+    @include mq(tablet-only) {
+      margin-right: 90px;
+    }
+    
+    @include mq(tablet) {
+      display: flex;
+      align-items: center;
+    }
+    
+    @include mq(desktop) {
+      margin-right: auto;
+    }
+  }
+
+  .nav__logo {
+    color: $logo-color;
+
+    @include mq(mobile-only) {
+      line-height: 60px;
+    }
+
+    @include mq(tablet) {
+      margin-right: 87px;
+    }
+
+    @include mq(desktop) {
+      margin-right: 93px;
+    }
+  }
+
+  .nav__list,
+  .contact__list {
+    @include mq(mobile-only) {
+      display: none;
+    }
+    
+    @include mq(tablet) {
+      display: flex;
+
+      line-height: 1.14;
+      letter-spacing: 0.02em;
+    }
+  }
+
+  .contact__list {
+    @include mq(tablet) {
+      flex-wrap: wrap;
+    }
+  }
+
+  .nav__item {
+    @include mq(tablet) {
+      margin-right: 50px;
+    
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .contact__item {
+    @include mq(tablet-only) {
+      margin-bottom: 10px;
+    
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @include mq(tablet) {
+      display: flex;
+      align-items: center;
+    
+      .contact__icon {
+        margin-right: 10px;
+    
+        fill: #757575;
+        transition: fill $duration-time-function;
+      }
+    
+      &:hover .contact__icon,
+      &:focus .contact__icon {
+        fill: $accent-text-color;
+      }
+    }
+
+    @include mq(desktop) {
+      margin-right: 50px;
+    
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .nav__link {
+    @include mq(tablet) {
+      position: relative;
+
+      display: block;
+      padding: 32px 0;
+
+      color: $secondary-text-color;
+      @include font(14px, 500, 1.2, 0.02em);
+    }
+  }
+
+  .contact__link[href^="mailto"],
+  .contact__link[href^="tel"] {
+    @include mq(tablet-only) {
+      @include font(12px, 500, 1.2, 0.02em);
+    }
+
+    @include mq(tablet) {
+      display: flex;
+      align-items: center;
+      
+      color: $primary-text-color;
+    }
+    
+    @include mq(desktop) {
+      padding: 32px 0;
+      @include font(14px, 500, 1.2, 0.02em);
+    }
+  }
+
+  .nav__link,
+  .contact__link {
+    @include mq(tablet) {
+      transition: color $duration-time-function;
+    
+      &:hover,
+      &:focus {
+        color: $accent-text-color;
+      }
+    }
+  }
+
 }

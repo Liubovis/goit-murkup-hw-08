@@ -1,0 +1,35 @@
+.menu-container {
+  @include mq(mobile-only) {
+    &.is-open {
+      display: flex;
+    }
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+    @include boxSize(100vw ,100vh);
+
+    background-color: $primary-background-color;
+
+
+    .menu-button {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+
+      &__icon--cross {
+        fill: $logo-color;
+        transition: fill $duration-time-function;
+      }
+      
+      &:hover .menu-button__icon--cross,
+      &:focus .menu-button__icon--cross {
+        fill: $accent-text-color;
+      }
+    }
+  }
+}

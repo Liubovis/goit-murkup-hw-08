@@ -1,0 +1,23 @@
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+
+  &__icon--menu {
+    fill: $logo-color;
+    transition: fill $duration-time-function;
+  }
+  
+  &:hover .menu-button__icon--menu,
+  &:focus .menu-button__icon--menu {
+    fill: $accent-text-color;
+  }
+
+  @include mq(tablet) {
+    display: none;
+  }
+}
