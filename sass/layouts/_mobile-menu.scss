@@ -30,6 +30,10 @@
       }
     }
   }
+
+  @include mq(tablet) {
+    display: none;
+  }
 }
 
 .mobile-menu {

@@ -55,7 +55,7 @@ body {
 
   display: flex;
   align-items: center;
-  @include boxSize(100%, 100%);
+  width: 100%;
 
   overflow: hidden;
 }
