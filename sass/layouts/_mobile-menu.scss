@@ -7,14 +7,12 @@
     position: fixed;
     top: 0;
     left: 0;
+    padding: 48px 40px;
 
     display: none;
-    justify-content: center;
-    align-items: center;
-    @include boxSize(100vw ,100vh);
+    @include boxSize(100vw, 100vh);
 
     background-color: $primary-background-color;
-
 
     .menu-button {
       position: absolute;
@@ -25,11 +23,111 @@
         fill: $logo-color;
         transition: fill $duration-time-function;
       }
-      
+
       &:hover .menu-button__icon--cross,
       &:focus .menu-button__icon--cross {
         fill: $accent-text-color;
       }
+    }
+  }
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+
+  &__nav-list {
+    flex-grow: 1;
+    @include font(40px, 500, 1.2, 0.02em);
+
+    @media screen and (min-width: 320px) and (max-width: 419.98px) {
+      font-size: 36px;
+    }
+  }
+
+  &__nav-item {
+    margin-bottom: 32px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__nav-link {
+    color: $secondary-text-color;
+    transition: color $duration-time-function;
+
+    &:hover,
+    &:focus {
+      color: $accent-text-color;
+    }
+  }
+
+  &__contact-list {
+    display: block;
+    margin-bottom: 134px;
+  }
+
+  &__contact-item {
+    margin-bottom: 32px;
+
+    & > .mobile-menu__contact-link {
+      @include font(34px, 500, 1.2, 0.02em);
+      color: $accent-text-color;
+
+      @media screen and (min-width: 320px) and (max-width: 419.98px) {
+        font-size: 26px;
+      }
+    }
+
+    &:last-child > .mobile-menu__contact-link {
+      @include font(24px, 500, 1.2, 0.02em);
+      color: $primary-text-color;
+
+      @media screen and (min-width: 320px) and (max-width: 419.98px) {
+        font-size: 20px;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__socials-item {
+    position: relative;
+    display: inline;
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:not(:last-child)::after {
+      content: '';
+
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      display: block;
+      @include boxSize(1px, 100%);
+      margin-right: -10px;
+
+      background-color: rgb(33 33 33 / 20%);
+    }
+  }
+
+  &__socials-link {
+    color: $accent-text-color;
+    @include font(16px, 500, 1.2, 0.02em);
+
+    @include mq(mobile) {
+      font-size: 18px;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 419.98px) {
+      font-size: 10px;
     }
   }
 }

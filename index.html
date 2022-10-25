@@ -579,7 +579,7 @@
 
 
       <!-- mobile-menu -->
-      <div class="menu-container js-menu-container" id="mobile-menu">
+      <div class="menu-container js-menu-container" aria-expanded="true" aria-controls="mobile-menu">
         <button class="menu-button js-close-menu">
           <svg class="menu-button__icon--cross" width="40" height="40">
             <use  href="./images/sprite.svg#menu-close"></use>
@@ -587,45 +587,45 @@
         </button>
 
         <div class="mobile-menu">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a class="nav__link active" href="./index.html">Студія</a>
+          <ul class="mobile-menu__nav-list">
+            <li class="mobile-menu__nav-item">
+              <a class="mobile-menu__nav-link active" href="./index.html">Студія</a>
             </li>
 
-            <li class="nav__item">
-              <a class="nav__link" href="./portfolio.html">Портфоліо</a>
+            <li class="mobile-menu__nav-item">
+              <a class="mobile-menu__nav-link" href="./portfolio.html">Портфоліо</a>
             </li>
 
-            <li class="nav__item">
-              <a class="nav__link" href="#">Контакти</a>
-            </li>
-          </ul>
-
-          <ul class="contact__list">
-            <li class="contact__item">
-              <a class="contact__link" href="tel:+380961111111">+38 096 111 11 11</a>
-            </li>
-
-            <li class="contact__item">
-              <a class="contact__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+            <li class="mobile-menu__nav-item">
+              <a class="mobile-menu__nav-link" href="#">Контакти</a>
             </li>
           </ul>
 
-          <ul class="socials">
-            <li class="socials__item">
-              <a class="socials__link" href="https://www.instagram.com/" target="_blank">Instagram</a>
+          <ul class="mobile-menu__contact-list">
+            <li class="mobile-menu__contact-item">
+              <a class="mobile-menu__contact-link" href="tel:+380961111111">+38 096 111 11 11</a>
             </li>
 
-            <li class="socials__item">
-              <a class="socials__link" href="https://twitter.com/" target="_blank">Twitter</a>
+            <li class="mobile-menu__contact-item">
+              <a class="mobile-menu__contact-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+            </li>
+          </ul>
+
+          <ul class="mobile-menu__socials">
+            <li class="mobile-menu__socials-item">
+              <a class="mobile-menu__socials-link" href="https://www.instagram.com/" target="_blank">Instagram</a>
             </li>
 
-            <li class="socials__item">
-              <a class="socials__link" href="https://www.facebook.com/" target="_blank">Facebook</a>
+            <li class="mobile-menu__socials-item">
+              <a class="mobile-menu__socials-link" href="https://twitter.com/" target="_blank">Twitter</a>
             </li>
 
-            <li class="socials__item">
-              <a class="socials__link" href="https://www.linkedin.com/" target="_blank">Linkedin</a>
+            <li class="mobile-menu__socials-item">
+              <a class="mobile-menu__socials-link" href="https://www.facebook.com/" target="_blank">Facebook</a>
+            </li>
+
+            <li class="mobile-menu__socials-item">
+              <a class="mobile-menu__socials-link" href="https://www.linkedin.com/" target="_blank">Linkedin</a>
             </li>
           </ul>
         </div>
@@ -633,6 +633,12 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+      defer
+    ></script>
     <script src="./js/mobile-menu.js" defer></script>
   </body>
 

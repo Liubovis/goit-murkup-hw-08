@@ -43,7 +43,7 @@ body {
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
-  
+
   @include mq(desktop) {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -62,7 +62,7 @@ body {
 
 .title {
   margin-bottom: 30px;
-  
+
   @include font(28px, 700, 1.2, 0.03em);
   text-align: center;
 
@@ -72,22 +72,8 @@ body {
   }
 }
 
-.nav__link.active {
+a.active {
   color: $accent-text-color;
-
-  &::after {
-    content: '';
-  
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-  
-    display: block;
-    @include boxSize(100%, 4px);
-  
-    background-color: $accent-background-color;
-    border-radius: 2px;
-  }
 }
 
 .visually-hidden {
